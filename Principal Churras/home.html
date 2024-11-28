@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espetinho RatsFrit's</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <picture>
+        <source media="(min-width: 1000px)" srcset="img/logo-300.png">
+        <img src="img/logo-600.png" alt="Logo da Espetinho RatsFrit's">
+      </picture>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Sabores</a></li>
+        <li><a href="#">Franquias</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Localização</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="main-content">
+        <!-- Alterado para <h1> para semântica e visibilidade melhor -->
+       <!-- <h1>Produtos</h1>-->
+        <!-- Conteúdo principal -->
+        <section class="produtos">
+          <section class="produto" onclick="changeImage('img/pag1.png')">
+            <img src="img/paodealho.png" alt="Pão de Alho">
+            <p>Pão de Alho</p>
+          </section>
+          <section class="produto" onclick="changeImage('img/pag2.png')">
+            <img src="img/COALHO.png" alt="Queijo Coalho">
+            <p>Queijo Coalho</p>
+          </section>
+          <section class="produto" onclick="changeImage('img/pag3.png')">
+            <img src="img/churras.png" alt="Churrasco">
+            <p>Churrasco</p>
+          </section>
+        </section>
+      </div>
+    
+      <!-- Nova Imagem à Direita -->
+      <div class="main-image-container">
+        <img id="mainImage" src="img/pix.png" alt="Nova Imagem" class="main-image">
+      </div>
+    </main>
+
+    <footer>
+      <p>O melhor da Região</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: #d4e4ef;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: row; /* Flexbox para alinhar o menu e conteúdo lado a lado */
+    min-height: 100vh; /* Garante que o layout ocupe a altura total da tela */
+}
+
+/* Container principal */
+#container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+/* Menu lateral */
+nav {
+    background: #0a6082;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 150px; /* Largura do menu */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh; /* Altura total da página */
+    position: fixed; /* Fixa o menu lateral */
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecedea;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    width: 20%;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ecedea;
+    color: #0a6082;
+}
+
+/* Conteúdo principal */
+main {
+    margin-left: 250px; /* Deixa o conteúdo deslocado para a direita, para que não sobreponha o menu */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #ecedea;
+    border-radius: 8px;
+    width: 100%;
+    flex: 1;
+}
+
+/* Título do conteúdo */
+main > h1 {
+    text-align: center;
+    width: 100%;
+    color: #d84c72;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Produtos */
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.produto {
+    background: #fff;
+    border: 1px solid #d84c72;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto p {
+    margin-top: 1rem;
+    background-color: #d84c72;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 4px;
+}
+
+/* Footer */
+/*
+footer {
+    background: #6aabd2;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.6rem;
+    color: #fff;
+}*/
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Coloca o menu e o conteúdo em colunas em telas menores */
+    }
+
+    nav {
+        width: 100%; /* O menu ocupa toda a largura em telas pequenas */
+        height: auto; /* Ajusta a altura do menu para o conteúdo */
+        position: relative; /* Menu será relativo em telas pequenas */
+    }
+
+    main {
+        margin-left: 0; /* Remove o espaço do menu lateral */
+        width: 100%; /* O conteúdo ocupa toda a largura da tela */
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row; /* Alinha os links horizontalmente no menu */
+        justify-content: center;
+    }
+
+    .produtos {
+        flex-direction: column; /* Muda para coluna de produtos em telas pequenas */
+    }
+
+    .produto {
+        width: 100%; /* Faz os produtos ocuparem toda a largura disponível */
+    }
+}

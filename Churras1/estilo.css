@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: #d4e4ef;
+    font-family: 'Arial', sans-serif;
+}
+
+#container {
+    width: 100%; /* Ocupa 100% da largura da página */
+    margin: 0; /* Remove margens laterais */
+    padding: 1rem; /* Espaçamento interno para manter organização */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header picture img {
+    height: 200px; /* Define a altura do logo */
+    width: auto;   /* Mantém a proporção correta */
+    max-width: 100%; /* Garante que não ultrapasse os limites do contêiner */
+}
+
+
+/* Navegação */
+nav {
+    background: #0a6082;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecedea;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ecedea;
+    color: #0a6082;
+}
+
+main {
+    background: #ecedea;
+    padding: 1rem 2rem; /* Reduz o padding vertical */
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    min-height: 130px; /* Ajusta a altura mínima se necessário */
+}
+
+main > header {
+    color: #d84c72;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 1rem; /* Ajusta a distância do título */
+}
+
+
+/* Produtos */
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espaçamento entre os produtos */
+    flex-wrap: wrap; /* Permite que os produtos quebrem linha em telas menores */
+}
+
+.produto {
+    background: #fff;
+    border: 1px solid #d84c72;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 30%; /* Cada produto ocupa 30% da largura */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.produto img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto p {
+    margin-top: 1rem;
+    background-color: #d84c72;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background: #6aabd2;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produtos {
+        flex-direction: column;
+        gap: 1.5rem; /* Reduz o espaço entre os produtos */
+    }
+
+    .produto {
+        width: 100%; /* Ocupa 100% da largura em telas menores */
+    }
+}
